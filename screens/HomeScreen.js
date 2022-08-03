@@ -46,8 +46,6 @@ const HomeScreen = () => {
       });
   }, []);
 
-  console.log(featuredCategories);
-
   return (
     <SafeAreaView
       style={{ marginTop: StatusBar.currentHeight }}
@@ -96,26 +94,15 @@ const HomeScreen = () => {
         {/* Categorias */}
         <Categories />
         {/* Features */}
-        <FeaturedRow
-          id="123"
-          title="Almoço Bom e Barato"
-          description="Opções até R$20 sem taxas"
-          featuredCategory="featured"
-        />
 
-        <FeaturedRow
-          id="1234"
-          title="Sem taxa de entrega"
-          description="A taxa é cortesia para você!"
-          featuredCategory="featured"
-        />
-
-        <FeaturedRow
-          id="12345"
-          title="Famosos"
-          description="Os mais pedidos do app!"
-          featuredCategory="featured"
-        />
+        {featuredCategories?.map((category) => (
+          <FeaturedRow
+            key={category._id}
+            id={category._id}
+            title={category.name}
+            description={category.short_description}
+          />
+        ))}
       </ScrollView>
     </SafeAreaView>
   );

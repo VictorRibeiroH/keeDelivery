@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { LocationMarkerIcon, StarIcon } from "react-native-heroicons/outline";
 import { useNavigation } from "@react-navigation/native";
+import { urlFor } from "../sanity";
 
 const RestaurantCard = ({
   id,
@@ -37,7 +38,7 @@ const RestaurantCard = ({
     >
       <Image
         source={{
-          uri: imgUrl,
+          uri: urlFor(imgUrl).url(),
         }}
         className="h-36 w-64 rounded-sm"
       />

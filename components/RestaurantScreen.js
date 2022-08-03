@@ -9,6 +9,7 @@ import {
 } from "react-native-heroicons/solid";
 import { QuestionMarkCircleIcon } from "react-native-heroicons/outline";
 import DishRow from "./DishRow";
+import { urlFor } from "../sanity";
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -39,7 +40,7 @@ const RestaurantScreen = () => {
       <View>
         <Image
           source={{
-            uri: imgUrl,
+            uri: urlFor(imgUrl).url(),
           }}
           className="w-full h-56 bg-gray-300 p-4"
         />
@@ -73,7 +74,7 @@ const RestaurantScreen = () => {
         <TouchableOpacity className="flex-row items-center space-x-2 p-4 border-y border-gray-300">
           <QuestionMarkCircleIcon color="gray" opacity={0.6} size={20} />
           <Text className="pl-2 flex-1 text-md font-bold">
-            Tem alguma alergia?
+            Tem alergia alimentar?
           </Text>
           <ChevronRightIcon color="#00CCBB" />
         </TouchableOpacity>
