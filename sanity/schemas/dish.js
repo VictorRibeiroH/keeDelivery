@@ -6,24 +6,24 @@ export default {
     {
       name: "name",
       type: "string",
-      title: "name of dish",
+      title: "Nome do prato",
       validation: (Rule) => Rule.required(),
     },
     {
       name: "short_description",
       type: "string",
-      title: "short description",
+      title: "descrição prato",
       validation: (Rule) => Rule.max(200),
     },
     {
       name: "price",
       type: "number",
-      title: "price of the dish in BRL",
+      title: "preço do prato em R$",
     },
     {
       name: "image",
       type: "image",
-      title: "image of the dish",
+      title: "imagem do prato",
     },
   ],
 };
