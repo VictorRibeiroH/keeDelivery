@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, { useState } from "react";
 import { urlFor } from "../sanity";
 import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/solid";
+import Currency from "react-currency-formatter";
 
 const DishRow = ({ id, name, description, price, image }) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -20,7 +21,9 @@ const DishRow = ({ id, name, description, price, image }) => {
             <Text className="text-lg mb-1">{name}</Text>
             <Text className="text-gray-400">{description}</Text>
             <Text></Text>
-            <Text className="text-green-300">R$ {price}</Text>
+            <Text className="text-green-300">
+              <Currency quantity={price} currency="BRL" />
+            </Text>
           </View>
 
           <View>
