@@ -112,7 +112,7 @@ const BasketScreen = () => {
           </View>
 
           <View className="flex-row justify-between">
-            <Text>Valor Total</Text>
+            <Text>Valor Total!</Text>
             <Text className="font-extrabold">
               <Currency quantity={basketTotal + 5.99} currency="BRL" />
             </Text>
