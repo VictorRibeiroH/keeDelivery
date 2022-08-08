@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 import { selectRestaurant } from "../features/restaurantSlice";
 import { XIcon } from "react-native-heroicons/solid";
 import * as Progress from "react-native-progress";
-import MapView, { Marker } from "react-native-maps";
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
@@ -54,29 +53,7 @@ const DeliveryScreen = () => {
         </View>
       </SafeAreaView>
 
-      <MapView
-        initialRegion={{
-          latitude: restaurant.latitude,
-          longitude: restaurant.longitude,
-          latitudeDelta: 0.005,
-          longitudeDelta: 0.005,
-        }}
-        className="flex-1 -mt-10 z-0"
-        mapType="mutedStandard"
-      >
-        <Marker
-          coordinate={{
-            latitude: restaurant.lat,
-            longitude: restaurant.long,
-          }}
-          title={restaurant.title}
-          description={restaurant.short_description}
-          identifier="origin"
-          pinColor="#00CCBB"
-        />
-      </MapView>
-
-      <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
+      <SafeAreaView className="bg-white flex-row items-center space-x-6 h-28 mt-96 ">
         <Image
           soruce={{
             uri: "https://links.papareact/wru",
