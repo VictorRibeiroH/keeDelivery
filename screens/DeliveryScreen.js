@@ -53,7 +53,7 @@ const DeliveryScreen = () => {
         </View>
       </SafeAreaView>
 
-      <SafeAreaView className="bg-white flex-row items-center space-x-6 h-28 mt-96 ">
+      <SafeAreaView className="bg-white flex-row items-center space-x-6 h-28 mt-64 ">
         <Image
           soruce={{
             uri: "https://links.papareact/wru",
